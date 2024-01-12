@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi step form</title>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <style>
+    .radiobtn {
+      display: block;
+    }
+
+    .container {
+      margin: 30px auto;
+      max-width: 600px;
+      border: 0.5px solid black;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="form">
+      <div class="form-wrapper">
+        <!-- sidebar start-->
+        <div class="sidebar-form">
+          <div class="active-side">
+            <div class="circle">1</div>
+            <div class="side-content">
+              <span>Step 1</span><b>Your Info</b>
+            </div>
+          </div>
+          <div class="side">
+            <div class="circle">2</div>
+            <div class="side-content">
+              <span>Step 2</span><b>Select Plan</b>
+            </div>
+          </div>
+          <div class="side">
+            <div class="circle">3</div>
+            <div class="side-content">
+              <span>Step 3</span><b> Add-ons</b>
+            </div>
+          </div>
+
+          <div class="side">
+            <div class="circle">4</div>
+            <div class="side-content">
+              <span>Step 4</span><b>Summary</b>
+            </div>
+          </div>
+        </div>
+        <!-- Sidebar end -->
+
+        <!-- Step 1 start -->
+        <div class="step step-1">
+          <div class="header">
+            <h1 class="title">Personal Info</h1>
+            <p class="content">
+              Please provide your name, email address, and phone number.
+            </p>
+          </div>
+          <form action="">
+            <div class="label">
+              <label for="name" class="block">Name</label>
+            </div>
+            <input type="text" name="" id="name" placeholder="e.g. Chioma Marycynthia" class="rounded-md border-solid"
+              required>
+            <div class="label">
+              <label for="email" class="block">Email Address</label>
+            </div>
+            <input type="text" name="" id="email" placeholder="e.g. chioma@gmail.com" class="rounded-md border-solid"
+              required>
+            <div class="label">
+              <label for="phone" class="block">Phone Number</label>
+            </div>
+            <input type="text" name="" id="" placeholder="e.g. +2349012345678" class="rounded-md border-solid" required>
+
+          </form>
+          <div class="btn">
+            <button class="btn-next" type="submit">Next Step</button>
+          </div>
+
+          <!-- Step 1 end -->
+
+          <!-- Step 2 start -->
+          <div class="step step-2">
+            <div class="header">
+              <h1 class="title">Select your plan</h1>
+              <p class="content">
+                You have the option of monthly or yearly billing.
+              </p>
+            </div>
+            <form action="">
+              <div class="select-plan selected">
+                <img src="" alt="arcade">
+                <div class="plan-info chosen">
+                  <b> Arcade</b>
+                  <span class="plan-price">$9/mo</span>
+                </div>
+              </div>
+              <div class="select-plan ">
+                <img src="" alt="advanced">
+                <div class="plan-info">
+                  <b> Advanced</b>
+                  <span class="plan-price">$12/mo</span>
+                </div>
+              </div>
+              <div class="select-plan ">
+                <img src="" alt="pro">
+                <div class="plan-info">
+                  <b> Pro</b>
+                  <span class="plan-price">$15/mo</span>
+                </div>
+              </div>
+              <div class="select-plan ">
+                <img src="" alt="pro">
+                <div class="plan-info">
+                  <b> Pro</b>
+                  <span class="plan-price">$15/mo</span>
+                </div>
+              </div>
+
+            </form>
+          </div>
+
+
+
+
+          Monthly
+          Yearly
+
+          Go Back
+          Next Step
+
+          <!-- Step 2 end -->
+
+          <!-- Step 3 start -->
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- <h1 class="text-bold text-center text-lg"> My Multi-step form</h1>
+  <div class="container my-7 py-7 ">
+    <div class="form-container flex gap-x-20">
+      <div class="sidebar">
+        <input type="radio" name="your-info" id="" class="radiobtn">
+        <p>STEP 1</p><label for="your-info">YOUR INFO</label>
+        <input type="radio" name="your-info" id="" class="radiobtn">
+        <p>STEP 2</p><label for="your-info">SELECT PLAN</label>
+        <input type="radio" name="your-info" id="" class="radiobtn">
+        <p>STEP 3</p><label for="your-info">ADD-ONS</label>
+        <input type="radio" name="your-info" id="" class="radiobtn">
+        <p>STEP 4</p><label for="your-info">SUMMARY</label>
+
+      </div>
+      <div class="main-form">
+        <h1>Personal Info</h1>
+        <p> Please provide your name, email address, and phone number. </p>
+        <label for="name" class="block">Name</label>
+        <input type="text" name="" id="" placeholder="e.g. Chioma Marycynthia" class="rounded-md border-solid">
+        <label for="email" class="block">Email Address</label>
+        <input type="text" name="" id="" placeholder="e.g. chioma@gmail.com" class="rounded-md border-solid">
+        <label for="phone" class="block">Phone Number</label>
+        <input type="text" name="" id="" placeholder="e.g. +2349012345678" class="rounded-md border-solid">
+      </div>
+    </div>
+    <button type="button" class="">Next Step</button>
+  </div>
+  <br>
+  <div class="container">
+    <div class="form-container flex">
+      <div class="sidebar">
+      </div>
+      <div class="main-form">
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="form-container flex">
+      <div class="sidebar">
+      </div>
+      <div class="main-form">
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <div class="form-container flex">
+      <div class="sidebar">
+      </div>
+      <div class="main-form">
+      </div>
+    </div> -->
+  </div>
+</body>
+
+</html>
