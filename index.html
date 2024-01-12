@@ -6,17 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Multi step form</title>
   <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-  <style>
-    .radiobtn {
-      display: block;
-    }
-
-    .container {
-      margin: 30px auto;
-      max-width: 600px;
-      border: 0.5px solid black;
-    }
-  </style>
 </head>
 
 <body>
@@ -79,7 +68,7 @@
             <input type="text" name="" id="" placeholder="e.g. +2349012345678" class="rounded-md border-solid" required>
 
           </form>
-          <div class="btn">
+          <div class="btns">
             <button class="btn-next" type="submit">Next Step</button>
           </div>
 
@@ -122,82 +111,117 @@
                   <span class="plan-price">$15/mo</span>
                 </div>
               </div>
-
             </form>
+            <div class="changer">
+              <p class="monthly cg-active">Monthly</p>
+              <label for="" class="change">
+                <input type="checkbox" name="" id="">
+                <span class="slider round"></span>
+              </label>
+              <p class="yearly"> Yearly</p>
+            </div>
+            <div class="btns">
+              <button class="btn-prev" type="button">Go Back</button>
+              <button class="btn-next" type="submit">Next Step</button>
+            </div>
           </div>
-
-
-
-
-          Monthly
-          Yearly
-
-          Go Back
-          Next Step
-
           <!-- Step 2 end -->
 
           <!-- Step 3 start -->
+          <div class="step step-3">
+            <div class="header">
+              <h1 class="title"> Pick add-ons</h1>
+              <p class="content">
+                Add-ons help enhance your gaming experience.
+              </p>
+            </div>
+            <form action="">
+              <div class="box" data-id="1">
+                <input type="checkbox" name="" id="online">
+                <div class="description">
+                  <label for="online">Online service</label>
+                  <small> Access to multiplayer games</small>
+                </div>
+                <p class="price">+$1/mo</p>
+              </div>
+              <div class="box" data-id="2">
+                <input type="checkbox" name="" id="larger">
+                <div class="description">
+                  <label for="larger">Larger storage</label>
+                  <small>Extra 1TB of cloud save</small>
+                </div>
+                <p class="price">+$2/mo</p>
+              </div>
+              <div class="box" data-id="3">
+                <input type="checkbox" name="" id="customizable">
+                <div class="description">
+                  <label for="customizable">Customizable Profile</label>
+                  <small>Custom theme on your profile</small>
+                </div>
+                <p class="price">+$2/mo</p>
+              </div>
+            </form>
+            <div class="btns">
+              <button class="btn-prev" type="button">Go Back</button>
+              <button class="btn-next" type="submit">Next Step</button>
+            </div>
+          </div>
+          <!-- Step 3 end -->
 
+          <!-- Step 4 start -->
+          <div class="step step-4">
+            <div class="header">
+              <h1 class="title"> Finishing up</h1>
+              <p class="content">
+                Double-check everything looks OK before confirming.
+              </p>
+            </div>
+            <div class="selection">
+              <div class="selection-container">
+                <div class="plan-selected">
+                  <p class="plan-name">Arcade(Monthly)</p>
+                  <p class="plan-price">$9/mo</p>
+                </div>
+                <hr>
+                <div class="addons">
+                  <template>
+                    <div class="selected-addon">
+                      <span class="service-name">Online service</span>
+                      <span class="service-price">+$1/mo</span>
+                    </div>
+                  </template>
+                </div>
+              </div>
+              <p class="total">Total(per month) <b>+12/mo</b></p>
+            </div>
+            <div class="btns">
+              <button class="btn-prev" type="button">Go Back</button>
+              <button class="btn-next" type="submit">Next Step</button>
+            </div>
+          </div>
+          <!-- Step 4 end -->
+
+          <!-- Step 5 start -->
+          <div class="step step-5">
+            <img src="" alt="thank">
+            <div class="header">
+              <h1 class="title">Thank you!</h1>
+              <p class="content">
+                Thanks for confirming your subscription! We hope you have fun
+                using our platform. If you ever need support, please feel free
+                to email us at support@loremgaming.com.
+              </p>
+            </div>
+            <button class="step-next"></button>
+            <!-- Step 5 end -->
+          </div>
+        </div>
+
+        <div class="footer">
+          Coded by <a href="#">Chioma Marycynthia</a>.
         </div>
       </div>
-
     </div>
-  </div>
-
-  <!-- <h1 class="text-bold text-center text-lg"> My Multi-step form</h1>
-  <div class="container my-7 py-7 ">
-    <div class="form-container flex gap-x-20">
-      <div class="sidebar">
-        <input type="radio" name="your-info" id="" class="radiobtn">
-        <p>STEP 1</p><label for="your-info">YOUR INFO</label>
-        <input type="radio" name="your-info" id="" class="radiobtn">
-        <p>STEP 2</p><label for="your-info">SELECT PLAN</label>
-        <input type="radio" name="your-info" id="" class="radiobtn">
-        <p>STEP 3</p><label for="your-info">ADD-ONS</label>
-        <input type="radio" name="your-info" id="" class="radiobtn">
-        <p>STEP 4</p><label for="your-info">SUMMARY</label>
-
-      </div>
-      <div class="main-form">
-        <h1>Personal Info</h1>
-        <p> Please provide your name, email address, and phone number. </p>
-        <label for="name" class="block">Name</label>
-        <input type="text" name="" id="" placeholder="e.g. Chioma Marycynthia" class="rounded-md border-solid">
-        <label for="email" class="block">Email Address</label>
-        <input type="text" name="" id="" placeholder="e.g. chioma@gmail.com" class="rounded-md border-solid">
-        <label for="phone" class="block">Phone Number</label>
-        <input type="text" name="" id="" placeholder="e.g. +2349012345678" class="rounded-md border-solid">
-      </div>
-    </div>
-    <button type="button" class="">Next Step</button>
-  </div>
-  <br>
-  <div class="container">
-    <div class="form-container flex">
-      <div class="sidebar">
-      </div>
-      <div class="main-form">
-      </div>
-    </div>
-  </div>
-  <br>
-  <div class="container">
-    <div class="form-container flex">
-      <div class="sidebar">
-      </div>
-      <div class="main-form">
-      </div>
-    </div>
-  </div>
-  <br>
-  <div class="container">
-    <div class="form-container flex">
-      <div class="sidebar">
-      </div>
-      <div class="main-form">
-      </div>
-    </div> -->
   </div>
 </body>
 
